@@ -1,0 +1,77 @@
+import numpy as np
+
+SENSOR = {
+    'ALML' : 0,
+    'ALMR' : 1,
+    'AVM'  : 2,
+    'PLML' : 3,
+    'PLMR' : 4
+    }
+
+INTER = {
+    'PVCL' : 0 + len(SENSOR), 
+    'PVCR' : 1 + len(SENSOR),
+    'AVAL' : 2 + len(SENSOR),
+    'AVAR' : 3 + len(SENSOR),
+    'AVBL' : 4 + len(SENSOR),
+    'AVBR' : 5 + len(SENSOR),
+    'AVDL' : 6 + len(SENSOR),
+    'AVDR' : 7 + len(SENSOR),
+    'LUAL' : 8 + len(SENSOR),
+    'LUAR' : 9 + len(SENSOR)
+    }
+
+MOTOR = {
+    'VB1' : 0   + len(SENSOR) + len(INTOR),
+    'VB2' : 1   + len(SENSOR) + len(INTOR),
+    'VB3' : 2   + len(SENSOR) + len(INTOR),
+    'VB4' : 3   + len(SENSOR) + len(INTOR),
+    'VB5' : 4   + len(SENSOR) + len(INTOR),
+    'VB6' : 5   + len(SENSOR) + len(INTOR),
+    'VB7' : 6   + len(SENSOR) + len(INTOR),
+    'VB8' : 7   + len(SENSOR) + len(INTOR),
+    'VB9' : 8   + len(SENSOR) + len(INTOR),
+    'VB10': 9   + len(SENSOR) + len(INTOR),
+    'VB11': 10  + len(SENSOR) + len(INTOR),
+    'DB1' : 11  + len(SENSOR) + len(INTOR),
+    'DB2' : 12  + len(SENSOR) + len(INTOR),
+    'DB3' : 13  + len(SENSOR) + len(INTOR),
+    'DB4' : 14  + len(SENSOR) + len(INTOR),
+    'DB5' : 15  + len(SENSOR) + len(INTOR),
+    'DB6' : 16  + len(SENSOR) + len(INTOR),
+    'DB7' : 17  + len(SENSOR) + len(INTOR),
+    'VA1' : 18  + len(SENSOR) + len(INTOR),
+    'VA2' : 19  + len(SENSOR) + len(INTOR),
+    'VA3' : 20  + len(SENSOR) + len(INTOR),
+    'VA4' : 21  + len(SENSOR) + len(INTOR),
+    'VA5' : 22  + len(SENSOR) + len(INTOR),
+    'VA5' : 23  + len(SENSOR) + len(INTOR),
+    'VA6' : 24  + len(SENSOR) + len(INTOR),
+    'VA7' : 25  + len(SENSOR) + len(INTOR),
+    'VA8' : 26  + len(SENSOR) + len(INTOR),
+    'VA9' : 27  + len(SENSOR) + len(INTOR),
+    'VA10': 28  + len(SENSOR) + len(INTOR),
+    'VA11': 29  + len(SENSOR) + len(INTOR),
+    'VA12': 30  + len(SENSOR) + len(INTOR),
+    'DA1' : 31  + len(SENSOR) + len(INTOR),
+    'DA2' : 32  + len(SENSOR) + len(INTOR),
+    'DA3' : 33  + len(SENSOR) + len(INTOR),
+    'DA4' : 34  + len(SENSOR) + len(INTOR),
+    'DA5' : 35  + len(SENSOR) + len(INTOR),
+    'DA6' : 36  + len(SENSOR) + len(INTOR),
+    'DA7' : 37  + len(SENSOR) + len(INTOR),
+    'DA8' : 38  + len(SENSOR) + len(INTOR),
+    'DA9' : 39  + len(SENSOR) + len(INTOR),
+    'AS1' : 40  + len(SENSOR) + len(INTOR),
+    'AS2' : 41  + len(SENSOR) + len(INTOR),
+    'AS3' : 42  + len(SENSOR) + len(INTOR),
+    'AS4' : 43  + len(SENSOR) + len(INTOR),
+    'AS5' : 44  + len(SENSOR) + len(INTOR),
+    'AS6' : 45  + len(SENSOR) + len(INTOR),
+    'AS7' : 46  + len(SENSOR) + len(INTOR),
+    'AS8' : 47  + len(SENSOR) + len(INTOR),
+    'AS9' : 48  + len(SENSOR) + len(INTOR),
+    'AS10': 49  + len(SENSOR) + len(INTOR),
+    'AS11': 50  + len(SENSOR) + len(INTOR)
+    }
+
